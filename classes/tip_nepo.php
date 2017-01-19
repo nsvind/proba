@@ -28,17 +28,6 @@ class Tip_nepo{
 		return '<option value="'. $this->id .'">'. $this->nepo .'</option>\n';
 	}
         
-        function SelectFromTnepo($nepokretnost){
-		try {
-				$statement = $this->conn->prepare("SELECT * FROM tip_nepokretnosti WHERE id_nepo = ? AND nepokretnost = ?");
-				$statement->bindParam(1, $nepokretnost);
-				$statement->execute();
-				
-				return $statement;
-			}
-			catch(PDOException $e) {
-				echo $e->getMessage();
-			}
-	}
+        
 }
 ?>

@@ -58,6 +58,10 @@
             <!-- Start of header -->
             <?php
             require_once 'inc/header.php';
+            require_once './baza/db_proba.php';
+            
+            $db1 = new DB();
+            
             ?><!--// #END header-outer-container //-->
 
             <div class="layout-title">
@@ -86,12 +90,14 @@
                                                 <option></option>
                                                 <?php
                                                 require_once 'classes/tip_nepo.php';
-                                                $db3 = new Tip_nepo();
-                                                $tnepo = $db3->createOption();
+                                                
+                                                
+                                                $tnepo = $db1->SelectFromTnepo();
+                                                
 
                                                 while ($nepo = $tnepo->fetch(PDO::FETCH_ASSOC)) {
                                                     ?>
-                                                    <option value="<?php echo $id_nepo; ?>"></option>
+                                                    <option value="<?php echo $nepo['id_nepo']; ?>"><?php echo $nepo['nepokretnost'] ?></option>
                                                     <?php
                                                 }
                                                 ?>
@@ -116,13 +122,12 @@
                                                 <option></option>
                                                 <?php
                                                 require_once 'classes/opstina.php';
-                                                $db2 = new Opstina();
-                                                $opstina = $db2->createOption();
-
+                                                
+                                                $opstina = $db1->SelectFromOpstina();
 
                                                 while ($ops = $opstina->fetch(PDO::FETCH_ASSOC)) {
                                                     ?>
-                                                    <option value="<?php $id_opstina; ?>"></option>
+                                                    <option value="<?php echo $ops['id_opstina']; ?>"><?php echo $ops['name'] ?></option>
                                                     <?php
                                                 }
                                                 ?>
@@ -144,9 +149,6 @@
                                             <input type="submit" name="send" value="Pošalji Email" />
 
 <?php
-require_once 'baza/db_proba.php';
-
-$db1 = new DB();
 
 if (isset($_POST['send'])) {
     $errMsg = '';

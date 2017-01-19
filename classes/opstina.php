@@ -27,19 +27,7 @@ class Opstina{
 	function createOption(){
 		return '<option value="'. $this->id .'">'. $this->name .'</option>\n';
 	}
-	
-	function SelectFromOpstina($name){
-		try {
-				$statement = $this->conn->prepare("SELECT * FROM opstina WHERE id_opstina = ? AND name = ?");
-				$statement->bindParam(1, $name);
-				$statement->execute();
-				
-				return $statement;
-			}
-			catch(PDOException $e) {
-				echo $e->getMessage();
-			}
-	}
+
 }
 
 //$db1 = new Opstina(1, 'Novi Sad'); 

@@ -1,4 +1,5 @@
 <?php
+
 class DB {
 
     private $conn;
@@ -96,4 +97,27 @@ class DB {
         }
     }
 
+    function SelectFromTnepo() {
+        try {
+            $statement = $this->conn->prepare("SELECT * FROM tip_nepokretnosti");
+            $statement->execute();
+
+            return $statement;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    	
+	function SelectFromOpstina(){
+		try {
+				$statement = $this->conn->prepare("SELECT * FROM opstina");
+				$statement->execute();
+				
+				return $statement;
+			}
+			catch(PDOException $e) {
+				echo $e->getMessage();
+			}
+	}
 }
