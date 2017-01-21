@@ -120,4 +120,28 @@ class DB {
 				echo $e->getMessage();
 			}
 	}
+        
+        function SelectFromKuca(){
+		try {
+				$statement = $this->conn->prepare("SELECT * FROM opcija_kuca");
+				$statement->execute();
+				
+				return $statement;
+			}
+			catch(PDOException $e) {
+				echo $e->getMessage();
+			}
+	}
+        
+        function SelectFromZemlja(){
+		try {
+				$statement = $this->conn->prepare("SELECT * FROM opcija_zemlja");
+				$statement->execute();
+				
+				return $statement;
+			}
+			catch(PDOException $e) {
+				echo $e->getMessage();
+			}
+	}
 }

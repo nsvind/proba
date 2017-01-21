@@ -91,30 +91,44 @@
                                                 <?php
                                                 require_once 'classes/tip_nepo.php';
                                                 
-                                                
                                                 $tnepo = $db1->SelectFromTnepo();
                                                 
-
                                                 while ($nepo = $tnepo->fetch(PDO::FETCH_ASSOC)) {
-                                                    ?>
-                                                    <option value="<?php echo $nepo['id_nepo']; ?>"><?php echo $nepo['nepokretnost'] ?></option>
-                                                    <?php
+                                                    
+                                                    $oTipNepo = new Tip_nepo($nepo['id_nepo'], $nepo['nepokretnost']);
+                                                    echo $oTipNepo->createOption();
+                                                    
                                                 }
                                                 ?>
-
-                                                <!--<option value="1">Stan</option>
-                                                     <option value="2">Kuća</option>
-                                                     <option value="3">Zemljište</option>-->
                                             </select>
                                             <select name="opis" id="opcija1">
                                                 <option></option>
-                                                <option value="1">Pomocni objekti + povrišine</option>
-                                                <option value="2">Plac površina</option>
+                                               <?php
+                                               require_once 'classes/opcija_kuca.php';
+                                               
+                                               $op_kuca = $db1->SelectFromKuca();
+                                               
+                                               while ($kuca = $op_kuca->fetch(PDO::FETCH_ASSOC)){
+                                                   
+                                                   $opcijaKuca = new Opcija_kuca($kuca['id_kuca'], $kuca['option_kuca']);
+                                                   echo $opcijaKuca->createOption();
+                                               }
+                                               ?>
+                                                 
                                             </select>
                                             <select id="opcija2">
                                                 <option></option>
-                                                <option value="1">Poljoprivredno</option>
-                                                <option value="2">Gradjevinsko</option>
+                                                <?php
+                                               require_once 'classes/opcija_zemlja.php';
+                                               
+                                               $op_zemlja = $db1->SelectFromZemlja();
+                                               
+                                               while ($zemlja = $op_zemlja->fetch(PDO::FETCH_ASSOC)){
+                                                   
+                                                   $opcijaZemlja = new Opcija_zemlja($zemlja['id_zemlja'], $zemlja['option_zemlja']);
+                                                   echo $opcijaZemlja->createOption();
+                                               }
+                                               ?>
                                             </select>
                                             <br /><br />
                                             <label>Grad:</label>
@@ -131,9 +145,7 @@
                                                     <?php
                                                 }
                                                 ?>
-                                                <!--<option></option>
-                                                <option value="1"></option>
-                                                <option value="2"></option>-->
+
                                             </select>
                                             <!--<label>Deo Grada:</label>
                                             <select>
@@ -207,13 +219,13 @@ require_once 'inc/footer.html';
 
 
         <script type="text/javascript">
-            $(function () {
+           /* $(function () {
                 $('#opcija1').hide();
                 $('#opcija2').hide();
                 $('#nepokretnost').on('change', function (event) {
                     var opt = this.options[ this.selectedIndex ];
-                    var picked_kuca = $(opt).text().match(/Kuća/i);
-                    var picked_zemlja = $(opt).text().match(/Zemljište/i);
+                    var picked_kuca = $(opt).text().match(/Kuća/i);// /Kuća/i
+                    var picked_zemlja = $(opt).text().match(/Zemljište/i);// /Zemljište/i
                     if (picked_kuca) {
                         $('#opcija1').show();
                         $('#opcija2').hide();
@@ -225,7 +237,8 @@ require_once 'inc/footer.html';
                         $('#opcija2').hide();
                     }
                 });
-            });
+            });*/
+          
         </script>
 
     </body>

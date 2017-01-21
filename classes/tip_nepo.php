@@ -25,7 +25,7 @@ class Tip_nepo{
 	}
 	
 	function createOption(){
-		return '<option value="'. $this->id .'">'. $this->nepo .'</option>\n';
+		return '<option value="'. $this->id .'">'. $this->nepo .'</option>' . PHP_EOL;
 	}
         
         

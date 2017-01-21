@@ -41,13 +41,12 @@ $msg = '';
 			$_SESSION['first_name'] = $user['first_name'];
 			$_SESSION['last_name'] = $user['last_name'];
 			$_SESSION['email'] = $user['email'];
-			$_SESSION['w'] = "info";
 		}
 	}
 }
 					
-if(isset($_SESSION['w'])){
-	require_once $_SESSION['w'] . ".php";
+if(isset($_SESSION['id'])){
+	require_once "info.php";
 	?>
 						
 <style>
