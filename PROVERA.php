@@ -11,29 +11,63 @@
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 <html lang="en-US">
 <!--<![endif]-->
-<head>
-<title>Evidencija nepokretnosti</title>
-  <link rel="shortcut icon" href="http://www.datainvestment.rs/wp-content/uploads/2014/03/favicon.ico" />
-<meta charset="UTF-8"/>
-<script type="text/javascript">
+	<head>
+		<title>Ponuda | Data Investment</title>
+		<link rel="shortcut icon" href="http://www.datainvestment.rs/wp-content/uploads/2014/03/favicon.ico" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!--// Mobile Specific //-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+        <!--// Title Tags //-->
+       
+        <!--// Browser Specical Files //-->
+
+        <!--// Browser Specical CSS //-->
+        <!--[if IE 8]><link href="http://www.datainvestment.rs/wp-content/themes/Edu/assets/css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--// Site Favicon //-->
+        
+
+        <!--// WP HEAD //-->
+
+        <!-- All in One SEO Pack 2.3.11.1 by Michael Torbert of Semper Fi Web Design[659,741] -->
+        <meta name="description"  content="Ponuda za kupovinu nekretnina" />
+
+        <meta name="keywords"  content="ponuda, nekretnina, nekretnine, stan, kuća" />
+		
+		<script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.datainvestment.rs\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7"}};
 			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
+		
 		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-<link rel='stylesheet' id='layerslider-css'  href='http://www.datainvestment.rs/wp-content/plugins/LayerSlider/static/css/layerslider.css?ver=5.0.2' type='text/css' media='all' />
+			img.wp-smiley,
+			img.emoji {
+				display: inline !important;
+				border: none !important;
+				box-shadow: none !important;
+				height: 1em !important;
+				width: 1em !important;
+				margin: 0 .07em !important;
+				vertical-align: -0.1em !important;
+				background: none !important;
+				padding: 0 !important;
+			}
+		</style>
+		
+		<!--<link rel="stylesheet" type="text/css" href="css/main.css">-->
+		
+        <link rel="canonical" href="http://www.datainvestment.rs/delatnosti/procena-vrednosti-i-strukture-kapitala-preduzeca/" />
+        <!-- /all in one seo pack -->
+        <link rel='dns-prefetch' href='//maps.google.com' />
+        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+        <link rel='dns-prefetch' href='//s.w.org' />
+        <link rel="alternate" type="application/rss+xml" title="Data Investment &raquo; Feed" href="http://www.datainvestment.rs/feed/" />
+        <link rel="alternate" type="application/rss+xml" title="Data Investment &raquo; Comments Feed" href="http://www.datainvestment.rs/comments/feed/" />
+        <link rel="alternate" type="application/rss+xml" title="Data Investment &raquo; Procena vrednosti i strukture kapitala preduzeća Comments Feed" href="http://www.datainvestment.rs/delatnosti/procena-vrednosti-i-strukture-kapitala-preduzeca/feed/" />
+        
+        
+        <link rel='stylesheet' id='layerslider-css'  href='http://www.datainvestment.rs/wp-content/plugins/LayerSlider/static/css/layerslider.css?ver=5.0.2' type='text/css' media='all' />
 <link rel='stylesheet' id='ls-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900|Open+Sans:300|Indie+Flower:regular|Oswald:300,regular,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-css'  href='http://www.datainvestment.rs/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6' type='text/css' media='all' />
 <link rel='stylesheet' id='fontello-css'  href='http://www.datainvestment.rs/wp-content/plugins/stToolKit/assets/css/fontello.css?ver=4.7' type='text/css' media='all' />
@@ -62,245 +96,49 @@ var ajaxurl = "http:\/\/www.datainvestment.rs\/wp-admin\/admin-ajax.php";
 <link rel='shortlink' href='http://www.datainvestment.rs/?p=1350' />
 <link rel="alternate" type="application/json+oembed" href="http://www.datainvestment.rs/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.datainvestment.rs%2Fevidencija-nepokretnosti%2F" />
 <link rel="alternate" type="text/xml+oembed" href="http://www.datainvestment.rs/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.datainvestment.rs%2Fevidencija-nepokretnosti%2F&#038;format=xml" />
-<style type="text/css">
-        body{
-            font-family: 'Arial'; 
-                        font-style: normal;
-                                    font-style: normal;
-                                    font-weight: normal;
-                                    font-size: 13px;
-                                    line-height: 18px;
-                                    color: #525252;
-                        
-        }
-        </style>
-                        
-        <style type="text/css">
-        h1,h2,h3,h4,h5,h6{
-            font-family: 'Arial'; 
-                                                                                    
-        }
-        </style>
-            
-<style type="text/css">
-      
-                /* Accodion + Toogle */
-                .panel-default .panel-heading .acc-title a.collapsed,
-                .panel-default .panel-heading .acc-title a.collapsed i,
-                a{ color: #006f94; } 
-            
-                .sidebar .menu li.current-menu-item > a, a:hover { color: #ff0000; } 
-                    
-        /* Main Menu */
-        .main-nav-outer-wrapper {
-            background:#c62020;
-        	/* Old browsers */
-        	background:#c62020 -moz-linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
-        	/* FF3.6+*/
-        	background:#c62020 -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,.2)),color-stop(100%,rgba(0,0,0,.2)));
-        	/* Chrome,Safari4+*/
-        	background:#c62020 -webkit-linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
-        	/* Chrome10+,Safari5.1+*/
-        	background:#c62020 -o-linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
-        	/* Opera11.10+*/
-        	background:#c62020 -ms-linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
-        	/* IE10+*/
-        	background:#c62020 linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
-        }
+
         
-        /* Box Icon in Megamenu */
-        #megaMenu #menuMobile li.menu-item-depth-0 .nav-dd .icon-menu a:hover, 
-        #megaMenu #megaST li.menu-item-depth-0 .nav-dd .icon-menu a:hover,
-        /* Item Title Tab in Megamenu */
-        #megaMenu #menuMobile .nav-dd ul.nav-tabs li.active a,
-        #megaMenu #megaST .nav-dd ul.nav-tabs li.active a,
-        /* Pagination */
-        .pagination > .active > a, 
-        .pagination > .active > span, 
-        .pagination > .active > a:hover, 
-        .pagination > .active > span:hover, 
-        .pagination > .active > a:focus, 
-        .pagination > .active > span:focus,
-        /* Box Service */
-        .box-style-2 a,
-        /* Widget Tag Clound */
-        .widget_tag_cloud a:hover,
-        /* Button Color */
-        .btn-color:hover,
-        #megaMenu #megaST li.menu-item-depth-0 .nav-dd a.btn-color:hover,
-        /* Button Default */
-        .btn-default,
-        a.btn-default,
-        #megaMenu #megaST li.menu-item-depth-0 .nav-dd a.btn-default,
-        /* Button Control */
-        #respond #submit,
-        #commentform #submit,
-        
-        /* Accodion + Toogle */
-        .panel-default .panel-heading .acc-title a,
-        .panel-default .panel-heading .acc-title a:hover,
-        
-        /**/
-        .st-testimonial-slider.carousel .carousel-indicators li.active,
-        .carousel-indicators .active,
-        ul.submenu-col li.active a
-        {
-            background-color: #c62020;
-        }
-        
-        /* Price Filter Handle */
-        .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, 
-        .woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle
-        {
-            background: #c62020 !important;
-        }
-        
-        /* Start Rating */
-        .woocommerce .products .star-rating, 
-        .woocommerce-page .products .star-rating,
-        .color-icon,  .text-color,
-        
-        /* */
-        .carousel-control .icon-prev, .carousel-control .icon-next
-        { 
-            color: #c62020; 
-        }
-        
-        /* Pagination */
-        .pagination>.active>a, 
-        .pagination>.active>span, 
-        .pagination>.active>a:hover, 
-        .pagination>.active>span:hover, 
-        .pagination>.active>a:focus, 
-        .pagination>.active>span:focus
-        {
-            border-color: #c62020;
-        }
-        
-        .bg-color:hover, 
-        .bg-parent-hover:hover .bg-color, 
-        .opened .bg-color , 
-        .st-carousel-w .prev, 
-        .st-carousel-w .next, 
-        .caro-pagination a
-        {
+        <?php
+        require_once 'php/main.php';
+        ?>
+
     
-        }
-    
-        h1{ font-size: 28px;} 
-h2{ font-size: 28px;} 
-h3{ font-size: 24px;} 
-h4{ font-size: 18px;} 
-h5{ font-size: 14px;} 
-h6{ font-size: 12px;} 
-</style>
-<style type="text/css">body { background: #ffffff url(http://www.datainvestment.rs/wp-content/uploads/2014/06/bodybg.jpg)  top left  repeat scroll;  ; }</style><style type="text/css">#megaMenu #menuMobile .no-megamenu ul, #megaMenu #megaST .no-megamenu ul, .header-wrapper, .main-nav-outer-wrapper .slideMenu .menu ul, #primary-nav-mobile-id > li > ul.sub-menu, #megaMenu #megaST li.menu-item-depth-0 .nav-dd, body .st-cart-icon .cart-content .widget_shopping_cart_content, #megaMenu #menuMobile .nav-dd { background: #f7f7f7;  ; }</style>
-<!--  ST CSS EDITOR -->
- <style type="text/css">
-h1.page-title {color:#888;}
-#phone {color:#000; background: url("/wp-content/themes/Edu/assets/images/telefon.png") no-repeat scroll right center rgba(0, 0, 0, 0);}
-#phone strong {color:#990000;}
-
-#megaMenu #megaST .no-megamenu .menu-row li:hover > a, #megaMenu #megaST .no-megamenu .menu-row li.active > a, #megaMenu #megaST .no-megamenu .menu-row li a:hover {color: #000;}
-
-.feat h3 { text-shadow: 0px 0px 0 #FFFFFF; }
-
-h3.service-title {color:#ffffff;}
-
-.box-style-2 a {
-    background: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%) repeat scroll 0 0 #C62020;
-    box-shadow: 0 10px 12px -6px rgba(0, 0, 0, 0.4), 0 0 0 0px rgba(255, 255, 255, 0.1) inset;
-}
-
-footer {
-    padding-top: 10px;
-}
-
-
-.main-wrapper .list-post .post, .main-wrapper .list-post .course, .main-wrapper .list-post .event, .main-wrapper .list-post .page {
-    padding-bottom: 10px;
-}
-.search .product, .post {
-    margin-bottom: 5px;
-}
-
-.st-il-content {
-    text-align: justify;
-}
-
-p {
-    text-align: justify;
-}
-</style>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-52595800-1', 'auto');
-  ga('send', 'pageview');
-
-</script>    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/html5shiv.js"></script>
-      <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/respond.min.js"></script>
-    <![endif]-->
-
 </head>
-<body class="use-editor page-template page-template-mapa-nepokretnosti-template page-template-mapa-nepokretnosti-template-php page page-id-1350 layout-full-width-mod">
-<?php
+
+    <body class="use-editor page-template page-template-mapa-nepokretnosti-template page-template-mapa-nepokretnosti-template-php page page-id-1350 layout-full-width-mod">
+
+
+
+       <!-- <div class="page-outer-wrapper">? -->
+
+            <!-- Start of header -->
+            <?php
             require_once 'inc/header.php';
             require_once './baza/db_proba.php';
             
             $db1 = new DB();
             
-            ?>
- <div class="container">
-            <div class="row">
-                <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
-                    <h1 class="page-title">Evidencija nepokretnosti</h1>
+            ?><!--// #END header-outer-container //-->
+
+            
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
+                            <h1 class="page-title">Ponuda za kupovinu nekretnina</h1>
+                        </div>
+                        <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
+                            <div class="st-breadcrumb"><!-- Breadcrumb NavXT 5.5.2 -->
+                                <a title="Go to Data Investment." href="http://www.datainvestment.rs" class="home">Data Investment</a> &gt; <a title="Go to Delatnosti." href="http://www.datainvestment.rs/delatnosti/" class="post post-page">Delatnosti</a> &gt; Ponuda za kupovinu nekretnina</div></div>
+                    </div>            
                 </div>
-                <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
-                    <div class="st-breadcrumb"><!-- Breadcrumb NavXT 5.5.2 -->
-<a title="Go to Data Investment." href="http://www.datainvestment.rs" class="home">Data Investment</a> &gt; Evidencija nepokretnosti</div>                </div>
-            </div>            
-        </div>
-    </div>
-	<style>
-    select {
-        height: 33px;
-        font-size: 13px;
-        padding :0;
-        background-color: #FFF;
-        border: 1px solid #E2E2E2;
-        box-shadow: 0px 0px 8px #E3E3E3 inset;
-        margin-bottom: 0;
-        transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-    }
-
-    .nepokretnosti-input {
-        width: 136px;
-    }
-
-    .nepokretnosti-buttons {
-        margin-top:23px;
-    }
-
-    .nepokretnosti-group {
-    }
-
-    .btn-default[disabled] {
-        background-color: #000 !important;
-    }
-</style>
-<div class="main-wrapper">
-    <div class="container main-wrapper-outer">
-        <div class="main-wrapper-inner">
-            <div class="row">
-                                <div class="col-md-12 main-content">
-                    <div class="wrap-primary">
-                                        <script>
+            
+            <div class="main-wrapper">
+                <div class="container main-wrapper-outer">
+                    <div class="main-wrapper-inner">
+                        <div class="row" >
+                            <div class="col-md-12 main-content">
+                                <div class="wrap-primary">
+                                    <script>
                     function updateKatastar (set) {
                         jQuery('#katopstinaId').prop('disabled', true);
                         var idOpstine = jQuery('#opstinaId').val();
@@ -473,21 +311,21 @@ p {
                         jQuery("#vrstanepokretnosti").multiselect("refresh");
                     }
                     </script>
-                                            <form class="form-inline" action="index.php" method="POST">
-                            <div class="row">
-                               
-								
-								<div class="form-group nepokretnosti-group">
-									<label>Email:</label>
-                                    <input type="text" name="email" id="sender" />
-								</div>
-								
-								<div class="form-group nepokretnosti-group">
-									<label for="kvadraturaId">Kvadratura:</label>
-									<input type="number" name="kvadratura" />m2
-								</div>
-                                
-                                 <div class="form-group nepokretnosti-group">
+
+                          <form class="form-inline" action="index.php" method="POST">
+                                    <div class="row">
+                                            
+                                      <div class="form-group nepokretnosti-group">
+                                        <label>Email:</label>
+                                        <input type="text" name="email" id="sender" />
+                                       </div>
+                                                
+                                       <div class="form-group nepokretnosti-group">
+					<label for="kvadraturaId">Kvadratura:</label>
+					<input type="number" name="kvadratura" />m2
+                                       </div>    
+                                                
+                                       <div class="form-group nepokretnosti-group">
                                          <label>Tip Nekretnine:</label>
                                           <select name="nepokretnost" id="nepokretnost">
                                            <option></option>
@@ -541,18 +379,18 @@ p {
                                           
                                          </select>
                                        </div>
-								
-								<br />
-								 <div class="form-group nepokretnosti-group">
-									<label for="komentarId">Komentar:</label>
-									<textarea class="comm" name="comment" id="comment"></textarea>
-								 </div>
-								 
-								 <div class="form-group nepokretnosti-group">
-                                    <label for="opstinaId">Opština:</label>
-                                    <select style="min-width:170px" class="wpcf7-form-control wpcf7-text" onchange="updateKatastar(false);validate();" name="opstinaId" id="opstinaId">
-                                        <option value="">Izaberite opštinu</option>
-										<?php
+                                         <br /><br />
+                                            
+                                       <div class="form-group nepokretnosti-group">
+                                            <label>Ostavite komentar:</label>
+                                            <textarea class="comm" name="comment" id="comment"></textarea>
+                                       </div>
+                                            
+                                       <div class="form-group nepokretnosti-group">
+                                         <label>Grad:</label>
+                                         <select style="min-width:170px" class="wpcf7-form-control wpcf7-text" onchange="updateKatastar(false);validate();" name="location" id="location">                                 
+                                            <option></option>
+                                                <?php
                                                 require_once 'classes/opstina.php';
                                                 
                                                 $opstina = $db1->SelectFromOpstina();
@@ -563,37 +401,33 @@ p {
                                                     <?php
                                                 }
                                                 ?>
-                                    </select>
-                                </div>
-								
-                                <div class="form-group nepokretnosti-group">
-                                    <label for="katopstinaId">Katastarska opština:</label>
-                                    <select disabled="disabled" class="wpcf7-form-control wpcf7-text" name="katopstinaId" id="katopstinaId">
-                                        <option value="">Izaberite katastarsku opštinu</option>
-                                                                            </select>
-                                </div>
-								
-                                <div class="form-group nepokretnosti-group">
-                                    <label for="vrstanepokretnosti">Vrste nepokretnosti:</label>
-                                    <select onchange="validate()" class="wpcf7-form-control wpcf7-text" multiple="multiple" name="vrstanepokretnosti[]" id="vrstanepokretnosti">
-                                        
-                                    </select>
-                                </div>
-								
-                                <div class="form-group pull-right nepokretnosti-buttons">
-                                    <input type="submit" id="submit" name="send" class="btn btn-default" value="Pošalji Email">
-                                    <input type="button" class="btn btn-default" onclick="resetuj()" value="Resetuj">
-                                </div>
-                            </div>
-                        </form>
-                        <hr>
-						</div>    
-                </div>
-			</div>    
-               </div>
-		</div>    
-               </div>
-	
+
+                                          </select>
+                                       </div>
+                                            
+                                       <div class="form-group nepokretnosti-group">
+                                          <label for="vrstanepokretnosti">Vrste nepokretnosti:</label>
+                                           <select onchange="validate()" class="wpcf7-form-control wpcf7-text" multiple="multiple" name="vrstanepokretnosti[]" id="vrstanepokretnosti">
+
+                                           </select>
+                                       </div>
+                                            <!--<label>Deo Grada:</label>
+                                            <select>
+                                                    <option><option>
+                                            </select>
+                    
+                                            
+                                            -->
+                                            
+                                           
+                                            
+                                       <div class="form-group pull-right nepokretnosti-buttons">
+                                                <input type="submit" id="submit" name="send" class="btn btn-default" value="Pošalji Email">
+                                                <input type="button" class="btn btn-default" onclick="resetuj()" value="Resetuj">
+                                      </div>
+                                    </div>
+                        
+
 <?php
 
 if (isset($_POST['send'])) {
@@ -621,11 +455,60 @@ if (isset($_POST['send'])) {
     }
 }
 ?>
-	
-	<?php
-		require_once '../proba/inc/footer.html';
-	?>
-		<script type='text/javascript' src='http://www.datainvestment.rs/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+
+                                        </form>
+
+
+                                        <p>Procena vrednosti i strukture kapitala preduzeća jedan je od najvažnijih pokazatelja koji suštinski opredeljuje donosioce poslovnih odluka da postupaju na ispravan, poslovno utemeljen na�?in. Sve najvažnije odluke u kompanijama donose se vodeći ra�?una o prethodno izvršenoj proceni vrednosti i strukture kapitala.</p>
+                                        <p>Procena kapitala je krucijalna aktivnost koja, u dinami�?nom i promenljivom tržišnom okruženju, podložnom neprestanim fluktuacijama, daje pravu, reprezentativnu sliku vrednosti i strukture ukupnog kapitala privrednog subjekta. Stoga je od presudnog zna�?aja da sve procene budu sastavljene stru�?no, savesno i, pre svega, nepristrasno, kako bi slika o realnoj tržišnoj vrednosti kapitala preduzeća bila jasna, precizna i zasnovana na objektivnim, proverljivim podacima. A upravo su stru�?nost, preciznost, jasnoća i nepristrasnost osnovni postulati na kojima se temelji naš rad.</p>
+                                        <p>Procene kapitala se obavljaju radi �?itavog niza razloga razli�?ite prirode (finansijsko izveštavanje i analiza, privatizacija, dokapitalizacija, statusne promene, ste�?ajni postupci), a naš tim eksperata sa dugogodišnjim iskustvom je izradio brojne procene kapitala u navedene svrhe. Metode koje se koriste prilikom izrade procene vrednosti i strukture kapitala su brojne i razli�?ite po karakteru i dužnost je procenitelja da odabere najadekvatniji postupak procene, vodeći ra�?una o mnoštvu faktora koji uti�?u na vrednost preduzeća i, na osnovu ispitivanja i analiziranja svih relevantnih informacija, sa�?ini najkvalitetniju sliku vrednosti kapitala privrednog subjekta.</p>
+                                    </div><!-- /. end post_class -->                            </div>
+                            </div>
+
+                            <!-- Start of sidebar -->
+<?php
+//require_once 'inc/sidebar.html';
+?><!--// #END sidebar //-->
+
+                        </div>
+                    </div>
+                </div><!-- end .containner -->
+            </div><!-- /.main-wrapper -->
+
+            <!-- Start of footer -->
+<?php
+require_once 'inc/footer.html';
+?><!--// #END footer-outer-wrapper //-->
+
+            <div id="toTop">Back to Top</div>
+        </div> 
+        <!--// #END page-outer-wrapper //-->
+        <script src="php/second.js"></script>
+
+
+        <script type="text/javascript">
+           /* $(function () {
+                $('#opcija1').hide();
+                $('#opcija2').hide();
+                $('#nepokretnost').on('change', function (event) {
+                    var opt = this.options[ this.selectedIndex ];
+                    var picked_kuca = $(opt).text().match(/Kuća/i);// /Kuća/i
+                    var picked_zemlja = $(opt).text().match(/Zemljište/i);// /Zemljište/i
+                    if (picked_kuca) {
+                        $('#opcija1').show();
+                        $('#opcija2').hide();
+                    } else if (picked_zemlja) {
+                        $('#opcija2').show();
+                        $('#opcija1').hide();
+                    } else {
+                        $('#opcija1').hide();
+                        $('#opcija2').hide();
+                    }
+                });
+            });*/
+          
+        </script>
+<script type='text/javascript' src='http://www.datainvestment.rs/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
@@ -659,8 +542,7 @@ var stMegamenuSettings = {"type":"hover","effect":"slide","speed":"600","align":
 <script type='text/javascript' src='http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/custom.js?ver=1.0'></script>
 <script type='text/javascript' src='http://www.datainvestment.rs/wp-includes/js/comment-reply.min.js?ver=4.7'></script>
 <script type='text/javascript' src='http://www.datainvestment.rs/wp-includes/js/wp-embed.min.js?ver=4.7'></script>
-</body>
-</html>	
+	
 <link rel="stylesheet" href="http://www.datainvestment.rs/wp-content/themes/Edu/assets/css/datepicker.css">
 <link rel="stylesheet" href="http://www.datainvestment.rs/wp-content/themes/Edu/assets/css/datepicker3.css">
 <link rel="stylesheet" href="http://www.datainvestment.rs/wp-content/themes/Edu/assets/css/leaflet.css">
@@ -673,239 +555,5 @@ var stMegamenuSettings = {"type":"hover","effect":"slide","speed":"600","align":
 <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/jquery-ui.min.js"></script>
 <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/jquery-multiselect.js"></script>
 <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/bootstrap-datepicker.js"></script>
-<script>
-    var map;
-    jQuery(function() {
-        jQuery("#dateFrom").datepicker({
-            autoclose: true
-        });
-        jQuery("#dateTo").datepicker({
-            autoclose: true
-        });
-
-        jQuery("#vrstanepokretnosti").multiselect({
-            noneSelectedText: "Izaberite nepokretnosti",
-            selectedText: "# od # izabrano",
-            checkAllText: "Izaberi sve",
-            uncheckAllText: "Poništi sve"
-        });
-        jQuery("#vrstanepokretnosti").multiselect("uncheckAll");
-
-        /***  little hack starts here ***/
-        L.Map = L.Map.extend({
-            openPopup: function(popup) {
-                //        this.closePopup();  // just comment this
-                this._popup = popup;
-
-                return this.addLayer(popup).fire('popupopen', {
-                    popup: this._popup
-                });
-            }
-        }); /***  end of hack ***/
-
-        map = L.map('map', {
-            center: [45.272229, 19.849441],
-            zoom: 13
-        });
-
-        var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1; //January is 0!
-        var yyyy = today.getFullYear();
-
-        if (dd < 10) {
-            dd = '0' + dd;
-        }
-
-        if (mm < 10) {
-            mm = '0' + mm;
-        } 
-
-        if (dd == 0) {
-            dd2 = 11;
-        } else {
-            dd2 = dd - 1;
-        }
-
-        if (dd2 < 10) {
-            dd2 = '0' + dd2;
-        } 
-
-        today = mm + '/' + dd + '/' + yyyy;
-        // begining = mm + '/' + dd2 + '/' + yyyy;
-        begining = '01/01/2014';
-
-        begining = '12/01/2015';today = '01/01/2017';
-        jQuery("#dateFrom").val(begining);
-        jQuery("#dateTo").val(today);
-
-        var izvor = 1;                jQuery('#izvor').val(izvor);
-                
-        setOpstine();
-        setVrste();
-
-        var data = '1,2,3,4,5,6,7';        //Do it simple
-
-        // var data="821,822,823,824";
-
-        //Make an array
-
-        var dataarray=data.split(",");
-
-        // Set the value
-
-        jQuery("#vrstanepokretnosti").val(dataarray);
-
-        // Then refresh
-
-        jQuery("#vrstanepokretnosti").multiselect("refresh");
-
-        updateKatastar(true);
-        validate();
-        showMarkers();
-    });
-
-    function showMarkers () {
-                var uids = [
-        54150,54151        ];
-        var lats = [
-        45.2508,45.2506        ];
-        var longs = [
-        19.7864,19.7904        ];
-        var nepNazivi = [
-        'stan u stambenoj  zgradi za kolektivno stanov','stan u stambenoj  zgradi za kolektivno stanov'        ];
-        var datumiU = [
-        '2016-01-26 00:00:00','2016-01-19 00:00:00'        ];
-        var ppNazivi = [
-        'Poseban deo objekta','Poseban deo objekta'        ];
-        var promNazivi = [
-        'poseban deo objekta','poseban deo objekta'        ];
-        var povrsine = [
-        26,52        ];
-        var povrsineZ = [
-        26,52        ];
-        var cene = [
-        '23500','38140'        ];
-        var ceneF = [
-        '23.500','38.140'        ];
-        // var pripadnosti = [
-                // ];
-        var ceneV = [
-        '23500','38140'        ];
-
-        var lastuid = -1;
-        var markers = L.markerClusterGroup({ maxClusterRadius: 100, chunkedLoading: true, chunkProgress: updateProgressBar });
-        var markerList = [];
-        for (var i = 0; i < lats.length; i++) {
-            // if (uids[i] != lastuid) {
-            //     lastuid = uids[i];
-            //     clusters.push(new L.MarkerClusterGroup());
-            // }
-                        var txt = "<b>Cena:</b> " + ceneF[i] + " " + "EUR" + "<br>";
-
-            tMesec = Number(datumiU[i].substr(5, 2));tGodina = datumiU[i].substr(0, 4);                switch (tMesec) {
-                    case 1:
-                        tMesec = "Januar";
-                        break;
-                    case 2:
-                        tMesec = "Februar";
-                        break;
-                    case 3:
-                        tMesec = "Mart";
-                        break;
-                    case 4:
-                        tMesec = "April";
-                        break;
-                    case 5:
-                        tMesec = "Maj";
-                        break;
-                    case 6:
-                        tMesec = "Jun";
-                        break;
-                    case 7:
-                        tMesec = "Jul";
-                        break;
-                    case 8:
-                        tMesec = "Avgust";
-                        break;
-                    case 9:
-                        tMesec = "Septembar";
-                        break;
-                    case 10:
-                        tMesec = "Oktobar";
-                        break;
-                    case 11:
-                        tMesec = "Novembar";
-                        break;
-                    case 12:
-                        tMesec = "Decembar";
-                        break;
-                }
-            txt += "<b>Datum:</b> " + tMesec + " " + tGodina + "<br>";            if (nepNazivi[i] != "") {
-                txt += "<br><b>Naziv:</b> " + nepNazivi[i] + "<br>";            }
-
-                                // if (pripadnosti[i] != "") {
-                    //     txt += '<b>Pripadnost:</b> ' + pripadnosti[i] + '<br>';
-                    // } 
-                    
-            txt += "<b>Vrsta nepokretnosti:</b> " + promNazivi[i];
-
-            if (povrsine[i] != -1) {
-                txt +="<br><b>Površina:</b> " + povrsine[i] + " m²";
-            }
-            if (povrsineZ[i] != "-1") {
-                        }
-            if (povrsine[i] != -1) {
-                cenam2 = Math.round((cene[i] / povrsine[i]) * 100) / 100;
-                txt += '<br><b>Cena/m²:</b> ' + cenam2 + ' EUR'; 
-            }
-
-            txt += "<br>Kupoprodaja";            var marker = L.marker([lats[i], longs[i]])
-                // .addTo(map)
-                .bindPopup(txt)
-                .on('popupopen', function (e) {
-                    console.log(e);
-                    if (!lockOpen) {
-                        lockOpen = true;
-                        for (var x = 0; x < markerList.length; x++) {
-                            if (uids[x] == e.target.uid) {
-                                markerList[x].openPopup();
-                            }
-                        }
-                        lockOpen = false;
-                    }
-                });
-            marker.uid = uids[i];
-            markerList.push(marker);
-        }
-
-        markers.addLayers(markerList);
-        map.addLayer(markers);
-
-        var group = new L.featureGroup(markerList);
-        map.fitBounds(group.getBounds().pad(0.5));
-
-            }
-
-    var lockOpen = false;
-    var progress = document.getElementById('progress');
-    var progressBar = document.getElementById('progress-bar');
-
-
-    function updateProgressBar(processed, total, elapsed, layersArray) {
-        if (elapsed > 1000) {
-            // if it takes more than a second to load, display the progress bar:
-            progress.style.display = 'block';
-            progressBar.style.width = Math.round(processed/total*100) + '%';
-        }
-
-        if (processed === total) {
-            // all markers processed - hide the progress bar:
-            progress.style.display = 'none';
-        }
-    }
-</script>
+</body>
+</html>

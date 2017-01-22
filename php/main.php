@@ -225,7 +225,7 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-52595800-1', 'auto');
-  ga('send', 'pageview');
+  ga('send', 'pageview');*/
 
 	</script>
 		<script src="https://code.jquery.com/jquery-1.11.3.js"></script>

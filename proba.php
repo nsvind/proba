@@ -250,12 +250,8 @@ p {
 </head>
 <body class="use-editor page-template page-template-mapa-nepokretnosti-template page-template-mapa-nepokretnosti-template-php page page-id-1350 layout-full-width-mod">
 <?php
-            require_once 'inc/header.php';
-            require_once './baza/db_proba.php';
-            
-            $db1 = new DB();
-            
-            ?>
+	require_once '../proba/inc/header.php';
+?>
  <div class="container">
             <div class="row">
                 <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
@@ -473,13 +469,19 @@ p {
                         jQuery("#vrstanepokretnosti").multiselect("refresh");
                     }
                     </script>
-                                            <form class="form-inline" action="index.php" method="POST">
+                                            <form class="form-inline" action="index.php" method="GET" class="">
                             <div class="row">
-                               
+                                <!-- <div class="form-group nepokretnosti-group">
+                                    <label for="izvor">Izvor:</label>
+                                    <select class="wpcf7-form-control wpcf7-text" onchange="setOpstine();setVrste();updateKatastar(false);validate();" name="izvor" id="izvor">
+                                        <option selected="selected" value="1">RGZ</option>
+                                        <option value="2">Data Investment</option>
+                                    </select>
+                                </div>-->
 								
 								<div class="form-group nepokretnosti-group">
-									<label>Email:</label>
-                                    <input type="text" name="email" id="sender" />
+									<label for="emailId">Email:</label>
+									<input type="text" name="email"/>
 								</div>
 								
 								<div class="form-group nepokretnosti-group">
@@ -487,101 +489,32 @@ p {
 									<input type="number" name="kvadratura" />m2
 								</div>
                                 
-                                 <div class="form-group nepokretnosti-group">
-                                         <label>Tip Nekretnine:</label>
-                                          <select name="nepokretnost" id="nepokretnost">
-                                           <option></option>
-                                                <?php
-                                                require_once 'classes/tip_nepo.php';
-                                                
-                                                $tnepo = $db1->SelectFromTnepo();
-                                                
-                                                while ($nepo = $tnepo->fetch(PDO::FETCH_ASSOC)) {
-                                                    
-                                                    $oTipNepo = new Tip_nepo($nepo['id_nepo'], $nepo['nepokretnost']);
-                                                    echo $oTipNepo->createOption();
-                                                    
-                                                }
-                                                ?>
-                                           </select>
-                                       </div>
-                                                
-                                       <div class="form-group nepokretnosti-group">
-                                         <select name="opis" id="opcija1">
-                                          <option></option>
-                                               <?php
-                                               require_once 'classes/opcija_kuca.php';
-                                               
-                                               $op_kuca = $db1->SelectFromKuca();
-                                               
-                                               while ($kuca = $op_kuca->fetch(PDO::FETCH_ASSOC)){
-                                                   
-                                                   $opcijaKuca = new Opcija_kuca($kuca['id_kuca'], $kuca['option_kuca']);
-                                                   echo $opcijaKuca->createOption();
-                                               }
-                                               ?>
-                                                 
-                                         </select>
-                                       </div>
-                                                
-                                       <div class="form-group nepokretnosti-group">
-                                         <select id="opcija2">
-                                                <option></option>
-                                                <?php
-                                               require_once 'classes/opcija_zemlja.php';
-                                               
-                                               $op_zemlja = $db1->SelectFromZemlja();
-                                               
-                                               while ($zemlja = $op_zemlja->fetch(PDO::FETCH_ASSOC)){
-                                                   
-                                                   $opcijaZemlja = new Opcija_zemlja($zemlja['id_zemlja'], $zemlja['option_zemlja']);
-                                                   echo $opcijaZemlja->createOption();
-                                               }
-                                               ?>
-                                          
-                                         </select>
-                                       </div>
-								
+                                
 								<br />
 								 <div class="form-group nepokretnosti-group">
 									<label for="komentarId">Komentar:</label>
-									<textarea class="comm" name="comment" id="comment"></textarea>
+									<textarea class="comm" name="comment" id="comment" ></textarea>
 								 </div>
-								 
 								 <div class="form-group nepokretnosti-group">
                                     <label for="opstinaId">Opština:</label>
                                     <select style="min-width:170px" class="wpcf7-form-control wpcf7-text" onchange="updateKatastar(false);validate();" name="opstinaId" id="opstinaId">
                                         <option value="">Izaberite opštinu</option>
-										<?php
-                                                require_once 'classes/opstina.php';
-                                                
-                                                $opstina = $db1->SelectFromOpstina();
-
-                                                while ($ops = $opstina->fetch(PDO::FETCH_ASSOC)) {
-                                                    ?>
-                                                    <option value="<?php echo $ops['id_opstina']; ?>"><?php echo $ops['name'] ?></option>
-                                                    <?php
-                                                }
-                                                ?>
                                     </select>
                                 </div>
-								
                                 <div class="form-group nepokretnosti-group">
                                     <label for="katopstinaId">Katastarska opština:</label>
                                     <select disabled="disabled" class="wpcf7-form-control wpcf7-text" name="katopstinaId" id="katopstinaId">
                                         <option value="">Izaberite katastarsku opštinu</option>
                                                                             </select>
                                 </div>
-								
                                 <div class="form-group nepokretnosti-group">
                                     <label for="vrstanepokretnosti">Vrste nepokretnosti:</label>
                                     <select onchange="validate()" class="wpcf7-form-control wpcf7-text" multiple="multiple" name="vrstanepokretnosti[]" id="vrstanepokretnosti">
                                         
                                     </select>
                                 </div>
-								
                                 <div class="form-group pull-right nepokretnosti-buttons">
-                                    <input type="submit" id="submit" name="send" class="btn btn-default" value="Pošalji Email">
+                                    <input type="submit" id="submit" name="submit" class="btn btn-default" value="Prikaži">
                                     <input type="button" class="btn btn-default" onclick="resetuj()" value="Resetuj">
                                 </div>
                             </div>
@@ -593,35 +526,6 @@ p {
                </div>
 		</div>    
                </div>
-	
-<?php
-
-if (isset($_POST['send'])) {
-    $errMsg = '';
-
-    $email = $_POST['email'];
-    $nepokretnost = $_POST['nepokretnost'];
-    $opis = $_POST['opis'];
-    $location = $_POST['location'];
-    $comment = $_POST['comment'];
-    if ($email == '') {
-        $errMsg = 'Uneiste email';
-    }
-    if ($nepokretnost == '') {
-        $errMsg = 'Unesite nepokretnost';
-    }
-    if ($location == '') {
-        $errMsg = 'Unesite lokaciju';
-    }
-    if ($comment == '') {
-        $errMsg = 'Unesite komentar';
-    }
-    if ($errMsg == '') {
-        $db1->InsertIntoPonuda($email, $nepokretnost, $opis, $location, $comment);
-    }
-}
-?>
-	
 	<?php
 		require_once '../proba/inc/footer.html';
 	?>
