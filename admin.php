@@ -1,5 +1,7 @@
 <?php
-session_start();
+    require_once "classes/session.php";
+    $sess = new Session();
+   // $ = $sess->SelectFromTnepo();
 ?>
 <!DOCTYPE html>
 <html>

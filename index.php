@@ -246,28 +246,7 @@ p {
       <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/html5shiv.js"></script>
       <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/respond.min.js"></script>
     <![endif]-->
-
-</head>
-<body class="use-editor page-template page-template-mapa-nepokretnosti-template page-template-mapa-nepokretnosti-template-php page page-id-1350 layout-full-width-mod">
-<?php
-            require_once 'inc/header.php';
-            require_once './baza/db_proba.php';
-            
-            $db1 = new DB();
-            
-            ?>
- <div class="container">
-            <div class="row">
-                <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
-                    <h1 class="page-title">Evidencija nepokretnosti</h1>
-                </div>
-                <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
-                    <div class="st-breadcrumb"><!-- Breadcrumb NavXT 5.5.2 -->
-<a title="Go to Data Investment." href="http://www.datainvestment.rs" class="home">Data Investment</a> &gt; Evidencija nepokretnosti</div>                </div>
-            </div>            
-        </div>
-    </div>
-	<style>
+<style>
     select {
         height: 33px;
         font-size: 13px;
@@ -294,6 +273,28 @@ p {
         background-color: #000 !important;
     }
 </style>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+</head>
+<body class="use-editor page-template page-template-mapa-nepokretnosti-template page-template-mapa-nepokretnosti-template-php page page-id-1350 layout-full-width-mod">
+<?php
+            require_once 'inc/header.php';
+            require_once './baza/db_proba.php';
+            
+            $db1 = new DB();
+            
+            ?>
+ <div class="container">
+            <div class="row">
+                <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
+                    <h1 class="page-title">Evidencija nepokretnosti</h1>
+                </div>
+                <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
+                    <div class="st-breadcrumb"><!-- Breadcrumb NavXT 5.5.2 -->
+<a title="Go to Data Investment." href="http://www.datainvestment.rs" class="home">Data Investment</a> &gt; Evidencija nepokretnosti</div>                </div>
+            </div>            
+        </div>
+    
+	
 <div class="main-wrapper">
     <div class="container main-wrapper-outer">
         <div class="main-wrapper-inner">
@@ -552,7 +553,7 @@ p {
                                     <label for="opstinaId">Opština:</label>
                                     <select style="min-width:170px" class="wpcf7-form-control wpcf7-text" onchange="updateKatastar(false);validate();" name="opstinaId" id="opstinaId">
                                         <option value="">Izaberite opštinu</option>
-										<?php
+					<?php
                                                 require_once 'classes/opstina.php';
                                                 
                                                 $opstina = $db1->SelectFromOpstina();
@@ -659,8 +660,7 @@ var stMegamenuSettings = {"type":"hover","effect":"slide","speed":"600","align":
 <script type='text/javascript' src='http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/custom.js?ver=1.0'></script>
 <script type='text/javascript' src='http://www.datainvestment.rs/wp-includes/js/comment-reply.min.js?ver=4.7'></script>
 <script type='text/javascript' src='http://www.datainvestment.rs/wp-includes/js/wp-embed.min.js?ver=4.7'></script>
-</body>
-</html>	
+
 <link rel="stylesheet" href="http://www.datainvestment.rs/wp-content/themes/Edu/assets/css/datepicker.css">
 <link rel="stylesheet" href="http://www.datainvestment.rs/wp-content/themes/Edu/assets/css/datepicker3.css">
 <link rel="stylesheet" href="http://www.datainvestment.rs/wp-content/themes/Edu/assets/css/leaflet.css">
@@ -909,3 +909,5 @@ var stMegamenuSettings = {"type":"hover","effect":"slide","speed":"600","align":
         }
     }
 </script>
+</body>
+</html>	

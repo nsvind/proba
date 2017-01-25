@@ -9,7 +9,7 @@ class DB {
     private $dbpassword = "";
 
     public function __construct() {
-        $this->conn = new PDO("mysql:host=" . $this->dbhost . ";dbname=" . $this->dbname, $this->dbusername, $this->dbpassword);
+        $this->conn = new PDO("mysql:host=" . $this->dbhost . ";dbname=" . $this->dbname, $this->dbusername, $this->dbpassword, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
     }
 
     function InsertIntoPonuda($email, $nepokretnost, $opis, $location, $comment) {
