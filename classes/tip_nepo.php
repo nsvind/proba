@@ -1,7 +1,7 @@
 <?php
 class Tip_nepo{
 	public $id;
-        public $nepo;
+    public $nepo;
 
     function __construct($pId, $pNepo){
 		$this->id = $pId;

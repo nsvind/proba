@@ -1,33 +1,59 @@
 <?php
     session_start();
-    if(!isset($_SESSION['id_admin'])){
-	header('Location: login.php');
-    } // na svim stranicama	
+    $_SESSION = array();
+    session_unset();
+    session_destroy();
+
+    session_start();
+	
+$msg = '';
+  if((isset($_POST['email_admin'])) and (isset($_POST['password']))){
+        $email_admin = trim($_POST['email_admin']);
+	$password = trim($_POST['password']);
+        
+	if(!empty($email_admin) and !empty($password)){
+            require_once 'baza/db_proba.php';
+		
+            $db1 = new DB();
+            $statement = $db1->SelectFromAdmin($email_admin, $password);
+		
+            if($statement->rowCount() > 1){
+		$msg = "System error!";
+            }else if($statement->rowCount() == 0){
+		$msg = "Unknown user!";
+            }else{
+		$user = $statement->fetch(PDO::FETCH_ASSOC);
+                    $_SESSION['id_admin'] = $user['id_admin'];
+                    $_SESSION['first_name'] = $user['first_name'];
+                    $_SESSION['last_name'] = $user['last_name'];
+                    $_SESSION['email_admin'] = $user['email_admin'];
+                    //$_SESSION['w'] = "info"; 
+            }
+	}
+ }
+					
+if(isset($_SESSION['id_admin'])){
+        session_commit();
+        header("Location: lista.php");
+        exit(0);
+        /*
+        if (headers_sent()) {
+            echo("<script>location.href = 'lista.php';</script>");
+        }
+        
+        if (!headers_sent()) {
+            die("Redirect failed. Please click on this link: <a href='login.php'>Login</a>");
+        } */
+
+}else{						
 ?>
 <!DOCTYPE html>
-<!--[if IE 6]>
-<html id="ie6" lang="en-US">
-<![endif]-->
-<!--[if IE 7]>
-<html id="ie7" lang="en-US">
-<![endif]-->
-<!--[if IE 8]>
-<html id="ie8" lang="en-US">
-<![endif]-->
-<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 <html lang="en-US">
-<!--<![endif]-->
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <!--// Mobile Specific //-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
-    <!--// Title Tags //-->
-    <title>E-mail lista ponuda | Data Investment</title>
+    <title>Login | Data Investment</title>
     <link rel="shortcut icon" href="http://www.datainvestment.rs/wp-content/uploads/2014/03/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		
+    <meta charset="UTF-8" />
+
 <link rel='stylesheet' id='layerslider-css'  href='http://www.datainvestment.rs/wp-content/plugins/LayerSlider/static/css/layerslider.css?ver=5.0.2' type='text/css' media='all' />
 <link rel='stylesheet' id='ls-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900|Open+Sans:300|Indie+Flower:regular|Oswald:300,regular,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-css'  href='http://www.datainvestment.rs/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6' type='text/css' media='all' />
@@ -52,185 +78,68 @@
 <link rel='shortlink' href='http://www.datainvestment.rs/?p=1350' />
 <link rel="alternate" type="application/json+oembed" href="http://www.datainvestment.rs/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.datainvestment.rs%2Fevidencija-nepokretnosti%2F" />
 <link rel="alternate" type="text/xml+oembed" href="http://www.datainvestment.rs/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.datainvestment.rs%2Fevidencija-nepokretnosti%2F&#038;format=xml" />
-        	
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script type="text/javascript">
-            function searchMe() {
-                var partialName = $("#partialName").val(), 
-                    checked = $("#check")[0].checked;
-            
-                $.post("search.php", {partialName: partialName, check: checked}, function (data) {
-                    if (data.length > 0) {
-                        $("#all_data").hide();
-                        $("#results").html(data);
-                    } else {
-                        $("#results").html('');
-                       $("#all_data").show();
-                    }
-				
-                });
-            }
-            
-            function getChecked(obj){
-                $("#formPagination").submit();
-                return true;
-            }
-    </script>
-		
-   <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
    <link href="css/style2.css" rel="stylesheet" type="text/css"/>
-   <link href="css/lista.css" rel="stylesheet" type="text/css"/>
-<script type='text/javascript' src='js/main.js'></script>
-  
+   <script type='text/javascript' src='js/main.js'></script>
+   						
 </head>
 <body class="use-editor page-template page-template-mapa-nepokretnosti-template page-template-mapa-nepokretnosti-template-php page page-id-1350 layout-full-width-mod">
 
-    <div class="page-outer-wrapper">
- <?php
-    require_once 'inc/header.php';
- ?>
-	
-    <div class="layout-title">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
-             <h1 class="page-title">E-mail lista ponuda</h1>
-          </div>
-             <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
-                <div class="st-breadcrumb"><!-- Breadcrumb NavXT 5.5.2 -->
-                  <a title="Go to Data Investment." href="http://www.datainvestment.rs" class="home">Data Investment</a>
-                   &gt; <a title="Go to Delatnosti." href="http://www.datainvestment.rs/delatnosti/" class="post post-page">
-                      Delatnosti</a> &gt; <a href="login.php" class="post post-page"> Login za Admina </a>
-                        &gt; E-mail lista ponuda</div></div>
-        </div>            
-      </div>
-    </div>
-    <div class="main-wrapper">
-     <div class="container main-wrapper-outer">
-       <div class="main-wrapper-inner">
-         <div class="row" >
-           <div class="col-lg-8 col-sm-8 col-md-8  column main-content">
-            <div class="wrap-primary">
-              <div class="use-editor post-876 page type-page status-publish hentry">
-	        
-        <table border="0" cellpadding="0" cellspacing="0" width="100%">
- <?php
-    require_once "info.php";
-    require_once 'baza/db_proba.php';
-
-    $db1 = new DB();
-    $checked = false;
-    $partialName = '';
-    if (isset($_POST['check']) && $_POST['check'] == 'on') {
-        $checked = true;
-    }
-    if (isset($_POST['partialName'])) {
-        $partialName = $_POST['partialName'];
-    }
-    $ukupnoIhIma = 0;
-    $res = $db1->countFromRealestateCheckbox($checked, $partialName);
-     while ($new = $res->fetch(PDO::FETCH_ASSOC)) {
-         $ukupnoIhIma = $new['broj'];
-     }
-     
-    $limit = 5;
-    $offset = 0;
+<div class="page-outer-wrapper">
     
-    if (isset($_GET['page'])) {
-        $offset = $limit * $_GET['page'];
-    }
-//    $offset = ((int)($ukupnoIhIma / $limit)) * $limit;
-     
-    $res = $db1->SelectFromRealestateCheckbox($limit, $offset, $checked, $partialName);
- ?>
-        <tr>
-        <td class="only" bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
-            
-        <form id="formPagination" name="formPagination" method="POST" action="">
-            
-         <table id="all_data" class="only">
-          <tr class="only">
-              <input <?php if ($checked) echo 'checked' ?> type="checkbox" id="check" name="check"
-                    onChange="getChecked(this)">Prikazati i obradjene<br /><br />
-            <label>Search: </label>
-            <input type="text" value="<?php echo $partialName?>" id="partialName" name="partialName"
-                   style="max-width:170px;min-height:33px;" onkeyUp="searchMe()" /><br /><br />
-             
-			 
-            <th class="only">RB.</th>
-            <th class="only">E-mail</th>
-            <th class="only">Opština</th>
-            <th class="only">Grad</th>
-            <th class="only"></th>
-
-           </tr>
-          <?php
-          $count = 1;
-            while ($new = $res->fetch(PDO::FETCH_ASSOC)) {
-                echo "<tr class='only'>";
-                echo "<td class='only'>" . $count . "</td>";
-                echo "<td class='only'>" . $new['email_client'] . "</td>";
-                echo "<td class='only'>" . $new['m_name'] . "</td>";
-                echo "<td class='only'>" . $new['community'] . "</td>";
-                echo "<td class='only'><a href='detaljnije.php?id=" . $new['id_realestate'] . "'>Detaljnije</a></tr>";
-                $count++;
-            }
-          ?>	
-
-           <tr>
-               <td colspan="5" style="text-align: center;">
-                   <!-- >>> PAGINATOR <<< -->
-                   <a> << </a>
-                   <a> < </a>
-                   <?php
-                   
-                       for( $i = 0; $i <= ((int)($ukupnoIhIma / $limit)) + 1; $i++){
-                           echo '<a> '. ($i + 1) .' </a>';
-//                           echo 'Ukupno ih ima: ' . $ukupnoIhIma . ' a offset je: ' .$offset. ' a to je strnica br: ' . ($offset+1) . ' <br/>';
-                       }
-                   
-                   ?>
-                   <a> > </a>
-                   <a> >> </a>
-               </td>
-           </tr>
-           
-           
-         </table>
-            </form>
-        </td>
-        </tr>
-
-         <tr>
-           <td id="results">
-           </td>
-         </tr>
-    </table>   
-          
-       </div><!-- /. end post_class -->                            
-     </div>
-    </div>
+<?php
+    require_once 'inc/administracija.php';        
+?><!--// #END header-outer-container //-->
 		
-    <!-- Start of sidebar -->
-    <?php
-	require_once 'inc/sidebar.html';
-    ?><!--// #END sidebar //-->
-    
+<div class="layout-title">
+ <div class="container">
+   <div class="row">
+     <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
+          <h1 class="page-title">Login za Admina</h1>
      </div>
+      <div class="col-lg-12 column col-sm-12 col-md-12 clearfix">
+        <div class="st-breadcrumb"><!-- Breadcrumb NavXT 5.5.2 --> 
+            <a title="Go to Data Investment." href="http://www.datainvestment.rs" class="home">Data Investment</a> &gt; <a title="Go to Delatnosti." href="http://www.datainvestment.rs/delatnosti/" class="post post-page">Delatnosti</a> &gt; Login za Admina</div>              
+		</div>
+      </div>            
     </div>
-  </div><!-- end .containner -->
-</div><!-- /.main-wrapper -->
+</div>
+
 	
-    <!-- start of footer -->
-    <?php
-	require_once 'inc/footer.html';
-    ?><!--// #END footer-outer-wrapper //-->
+<div class="main-wrapper">
+  <div class="container main-wrapper-outer">
+    <div class="main-wrapper-inner">
+      <div class="row">
+        <div class="col-md-12 main-content">
+          <div class="wrap-primary">
+			<div class="use-editor post-876 page type-page status-publish hentry">
+    <form action="" method="POST">
+		
+    <label>Email:</label>
+	<input style="max-width:170px;min-height:33px;" type="text" name="email_admin" />
+    <label>Password:</label>
+	<input style="max-width:170px;min-height:33px;" type="password" name="password"/><br /><br />	
+	<input type="submit" name="login" class="btn btn-default" value="Ulogujte se" /><br /><br />
+        
+
+								
+</form>
+
+<hr>
+	</div>
+            </div>    
+          </div>
+	</div>    
+      </div>
+    </div>    
+  </div>
+
+<?php
+    require_once 'inc/footer.html';
+?>
     
-    <div id="toTop">Back to Top</div>
-    
-</div> 
-<!--// #END page-outer-wrapper //-->
-	
+    </div>
 <script type='text/javascript' src='http://www.datainvestment.rs/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
 
 <script type='text/javascript' src='http://www.datainvestment.rs/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.6'></script>
@@ -260,6 +169,10 @@
 <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/jquery-ui.min.js"></script>
 <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/jquery-multiselect.js"></script>
 <script src="http://www.datainvestment.rs/wp-content/themes/Edu/assets/js/bootstrap-datepicker.js"></script>
-	
+
 </body>
-</html>
+</html>	
+					
+<?php
+    }
+?>

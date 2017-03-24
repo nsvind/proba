@@ -1,9 +1,10 @@
-<?php
+<?php 
 require_once 'baza/db_proba.php';
 
 $db1 = new DB();
 	
 $partialName = $_POST['partialName'];
+$check = $_POST['check'];
 	
 //	echo "email:" . $partialName;
 	
@@ -11,49 +12,43 @@ if( strlen($partialName) < 2){
 	return;
 }
 	
-	//$names = $conn->query("SELECT * FROM ponuda WHERE email LIKE '%$partialName%' OR location LIKE '%$partialName%'");
-//$names = $conn->prepare("SELECT * FROM ponuda WHERE email LIKE :email");
-	//$conn->bindParam(':name', "%$partialName%");
-// $conn->execute();
-// $names = $conn->fetchAll();
-
-//SelectFromPonuda($conn, $email, $location);
-/*
-try {
-			 $names = $conn->prepare("SELECT * FROM ponuda WHERE email LIKE '%$partialName%' OR location LIKE '%$partialName%'");
-			 $names->bindParam(1, $email);
-			 $names->bindParam(2, $location);
-			 $names->execute();
-		}
-		catch(PDOException $e) {
-			echo $e->getMessage();
-		}
-*/		
-
-$names = $db1->SelectFromPonuda($partialName);
-
-// echo "\nnum: " . $names->fetchColumn();
-
-if( $names->rowCount() ){
+$names = $db1->SelectFromRealestate($partialName, $check);
 ?>
-
-<table border="0" cellpadding="0" cellspacing="0" width="100%">	   
-	<tr>
-		<td class="only" bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
-			<table class="only">
-	<?php
-	while($nameArray = $names->fetch(PDO::FETCH_ASSOC)){
-		echo "<tr class='only'>";
-		echo "<td class='only'>" .$nameArray['id_ponuda'] . "</td>";
-		echo "<td class='only'>" .$nameArray['email'] . "</td>";
-		echo "<td class='only'>" .$nameArray['location'] . "</td>";
-		echo "<td class='only'><a href='detaljnije.php?id=" . $nameArray['id_ponuda'] . "'>Detaljnije</a></td></tr>";
-	}
+<table border="0" cellpadding="0" cellspacing="0" width="100%">	 
+<?php
+if( $names->rowCount() ){
+?>          
+    <tr>
+	<td class="only" bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+          <table class="only">
+            <tr class="only">    
+                            
+            <th class="only">RB.</th>
+            <th class="only">E-mail</th>
+            <th class="only">Opština</th>
+            <th class="only">Grad</th>
+            <th class="only"></th>
+            </tr>
+<?php
+    $count = 1;
+    while($nameArray = $names->fetch(PDO::FETCH_ASSOC)){
+	echo "<tr class='only'>";
+	echo "<td class='only'>" . $count . "</td>";
+	echo "<td class='only'>" . $nameArray['email_client'] . "</td>";
+	echo "<td class='only'>" . $nameArray['m_name'] . "</td>";
+	echo "<td class='only'>" . $nameArray['community'] . "</td>";
+	echo "<td class='only'><a href='detaljnije.php?id=" . $nameArray['id_realestate'] . "'>Detaljnije</a></td></tr>";
+        $count++;
+    }
 	
 ?>
-	</table>
-	</td>
-	</tr>
-	</table>
+    </table>
+    </td>
+    </tr>
+        <tr>
+           <td>
+           </td>
+         </tr>
+</table>
 <?php
 }

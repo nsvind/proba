@@ -332,7 +332,7 @@ var ajaxurl = "http:\/\/www.datainvestment.rs\/wp-admin\/admin-ajax.php";
                                                 <?php
                                                 require_once 'classes/tip_nepo.php';
                                                 
-                                                $tnepo = $db1->SelectFromTnepo();
+                                                $tnepo = $db1->SelectFromType();
                                                 
                                                 while ($nepo = $tnepo->fetch(PDO::FETCH_ASSOC)) {
                                                     
@@ -393,7 +393,7 @@ var ajaxurl = "http:\/\/www.datainvestment.rs\/wp-admin\/admin-ajax.php";
                                                 <?php
                                                 require_once 'classes/opstina.php';
                                                 
-                                                $opstina = $db1->SelectFromOpstina();
+                                                $opstina = $db1->SelectFromMunicipality();
 
                                                 while ($ops = $opstina->fetch(PDO::FETCH_ASSOC)) {
                                                     ?>
