@@ -105,13 +105,12 @@ if (isset($_GET['m']) && $_GET['m'] === 'f') {
 		$new = $res->fetch(PDO::FETCH_ASSOC);
                         //echo "<h1>Detalji o ponudi</h1>";
 			echo "<p><strong>E-mail: </strong>" . $new['email_client'] . "</p>";
-			echo "<p><strong>Grad: </strong>" . $new['m_name'] . "</p>";
-                        echo "<p><strong>Reon: </strong>" . $new['community'] . "</p>";
+			echo "<p><strong>Opština: </strong>" . $new['m_name'] . "</p>";
+                        echo "<p><strong>Grad: </strong>" . $new['community'] . "</p>";
 			echo "<p><strong>Nepokretnost: </strong>" . $new['tof_name'] . " - " . $new['o_name'] . " "
                                 . $new['cl_name'] . "</p>";
                         echo "<p><strong>Kvadratura: </strong>" . $new['quadrature'] . " m<sup>2</sup></strong></p>";
                         echo "<p><strong>Komentar: </strong>" . $new['comment_client'] . "</p>";
-                        echo "<p><strong>Slika</strong>";
                         
                         $res1 = $db1->SelectIDsFromImages($id);
                         

@@ -180,7 +180,7 @@ class DB {
         }
     }*/
     
-    function countFromRealestateCheckbox($checked, $partialName = '') {
+    function CountFromRealestateCheckbox($checked, $partialName = '') {
          $var = '%' . $partialName . '%';
         
         try {
@@ -197,12 +197,12 @@ class DB {
             }
             
             if ($partialName != '') {
-                if (!$checked) {
-                    $sql .= " where ";
-                } else {
-                    $sql .= " and ";
-                }
-                $sql .= " (r.email_client LIKE ? OR m.name LIKE ? OR c.community LIKE ?)";
+//                if (!$checked) {
+//                    $sql .= " where ";
+//                } else {
+//                    $sql .= " and ";
+//                }
+                $sql .= " and (r.email_client LIKE ? OR m.name LIKE ? OR c.community LIKE ?)";
             }
             
             $statement = $this->conn->prepare($sql);
@@ -238,12 +238,12 @@ class DB {
             }
             
             if ($partialName != '') {
-                if (!$checked) {
-                    $sql .= " where ";
-                } else {
-                    $sql .= " and ";
-                }
-                $sql .= " (r.email_client LIKE ? OR m.name LIKE ? OR c.community LIKE ?)";
+//                if (!$checked) {
+//                    $sql .= " where ";
+//                } else {
+//                    $sql .= " and ";
+//                }
+                $sql .= " and (r.email_client LIKE ? OR m.name LIKE ? OR c.community LIKE ?)";
             }
             
             $sql .= " LIMIT ? OFFSET ?";

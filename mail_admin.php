@@ -39,6 +39,7 @@ $emailbody = sprintf(
         . "<p>Hvala vam na svim poslatim informacijama vezanim za vašu procenu nepokretnosti</p>"
         . "<p>Nakon pažljivo pregledanih svih vaših poslatih informacija, DATA INVESTMENT Group je procenio vašu nepokretnost na vrednost od:"
         . " <br /><h1>%s dinara</h1></p>" // cena
+        . "<p><strong>Komentar:</strong></p>"
         . "<p>%s</p>", //comment
         $price,
         $comment_admin

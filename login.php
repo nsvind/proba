@@ -34,7 +34,7 @@ $msg = '';
 					
 if(isset($_SESSION['id_admin'])){
         session_commit();
-        header("Location: lista.php");
+        header("Location: lista.php?page=0");
         exit(0);
         /*
         if (headers_sent()) {

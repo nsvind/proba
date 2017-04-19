@@ -41,8 +41,11 @@ function updateOption () {
     jQuery('#classId').html('<option value="">Izaberite klasu</option>');
    jQuery('#optionId').html('<option value="">Izaberite opciju</option>');
    
+   jQuery('#optionId').prop('disabled', true);
+   jQuery('#classId').prop('disabled', true);
+   
     var vrstaID = jQuery('#vrstaID').val();
-    if (vrstaID !== '-') {
+    if (vrstaID !== '' && vrstaID !== '1') {
         jQuery.get('./option.php?vrstaId=' + vrstaID, function (data) {
         var str = '<option value="">Izaberite opciju</option>';
         for (var i = 0; i < data.length; i++) {
@@ -56,14 +59,18 @@ function updateOption () {
         jQuery('#optionId').prop('disabled', false);
         });
         
-    } else {
-        jQuery('#optionId').html('<option value="">Izaberite opciju</option>');
-    }
+    }// else {
+     //   jQuery('#optionId').html('<option value="">Izaberite opciju</option>');
+    //}
 }
 
 function updateClass () {
+    jQuery('#classId').html('<option value="">Izaberite klasu</option>');
+    
+    jQuery('#classId').prop('disabled', true);
+    
     var classId = jQuery('#optionId').val();
-    if (classId !== '') {
+    if (classId !== '' && classId !== '1' && classId !== '2' && classId !== '4') {
         jQuery.get('./class.php?id=' + classId, function (data) {
         var str = '<option value="">Izaberite klasu</option>';
         for (var i = 0; i < data.length; i++) {
@@ -77,70 +84,79 @@ function updateClass () {
         jQuery('#classId').prop('disabled', false);
         });
         
-    } else {
-        jQuery('#classId').html('<option value="">Izaberite klasu</option>');
-    }
+    }// else {
+     //   jQuery('#classId').html('<option value="">Izaberite klasu</option>');
+    //}
 }
 
 function validate () {
-    var ok = false;
+    var ok = true;
         
-        if (jQuery('#email_client').val() != '') {
-           ok = true;
+        if (jQuery('#email_client').val() == '') {
+           ok = ok && false;
         }
         
-        if (jQuery('#quadrature').val() != '') {
-           ok = true;
-        } else {
-            ok = false;
+        if (jQuery('#quadrature').val() == '') {
+           ok = ok && false;
         }
         
-        if (jQuery('#opstinaId').val() != '') {
-           ok = true;
-        }else {
-            ok = false;
+        if (jQuery('#opstinaId').val() == '') {
+            ok = ok && false;
         }
                         
-        if (jQuery('#katopstinaId').val() != '') {
-            ok = true;
-        }else {
-            ok = false;
+        if (jQuery('#katopstinaId').val() == '') {
+            ok = ok && false;
         }
         
         if(jQuery('#vrstaID').val() == 1){
-            ok = true;
+            ok = ok && true;
         } else if (jQuery('#vrstaID').val() == 2){
-            ok = true;
+            ok = ok && true;
             if(jQuery('#optionId').val() == ''){
-                ok = false;
+                ok = ok && false;
             }
         } else if (jQuery('#vrstaID').val() == 3){
-            ok = true;
+            ok = ok && true;
             if(jQuery('#optionId').val() == ''){
-                 ok = false;
+                 ok = ok && false;
             } else {
-                ok = true;
+                ok = ok && true;
                 if(jQuery('#optionId').val() == 3){
                     
                 if(jQuery('#classId').val() == ''){
-                    ok = false;
+                    ok = ok && false;
                 }
             }
             }
         }else {
-            ok = false;
+            ok = ok && false;
         }
                 
         if (jQuery('#comment').val() == '') {
-            ok = false;
-        }else {
-            ok = true;
+            ok = ok && false;
         }
      
-        if (jQuery('#img').val() == '') {
-            ok = false;
-        }else {
-            ok = true;
+//        if (jQuery('#img')[0].files.length > 3) {  //SLIKA NIJE OBAVEZNA
+//            ok = ok && false;
+//        }
+        
+        if (jQuery('#img')[0].files.length < 4){
+            var sum = 0;
+            var files = jQuery('#img')[0].files;
+           for(var i = 0; i < files.length; i++) {
+               sum += files[i].size;
+           }
+           
+           if (1 * 1024 * 1024 < sum) {
+               alert('Maksimalna velicina svih slika je 5Mb, izaberite ponovo...');
+               jQuery('#img').val('');
+               ok = ok && true;
+           }
+           
+        } else {
+            alert('Maksimalan broj slika je 3, izaberite ponovo...');
+            jQuery('#img').val('');
+            ok = ok && true;
         }
         
         if (ok) {

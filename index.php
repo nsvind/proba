@@ -1,7 +1,7 @@
 <?php
  require_once 'baza/db_proba.php';
  $db1 = new DB();  
-
+//nsvind.hopto.org:8081/datainvestment/
 if (isset($_POST['send'])) {
    
     $errMsg = '';
@@ -18,7 +18,8 @@ if (isset($_POST['send'])) {
     $classID = $_POST['classId'];
     
     if ($errMsg == '') {
-        $db1->InsertIntoRealestate($email_client, $quadrature, $comment_client, $ip, $typeID, $municipalityID, $catastralID, $optionID, $classID);
+        $db1->InsertIntoRealestate($email_client, $quadrature, $comment_client,
+                $ip, $typeID, $municipalityID, $catastralID, $optionID, $classID);
         
         $realestateID = $db1->getLastRealestateID();
             
@@ -33,6 +34,11 @@ if (isset($_POST['send'])) {
     $db1->InsertIntoImages($content, $image_name, $image_type, $image_size, $realestateID);
     
     }
+  /*  
+    if ($image_size > 11) {
+        echo "Sorry, your file is too large.";
+    }*/
+    
         // insert to comments with $realestateId
         //$db1->InsertIntoComments($realestateID, $adminID, $comment_admin, $price);
     }
@@ -45,11 +51,21 @@ if (isset($_POST['send'])) {
 
 $emailbody = sprintf(
         "<hr><img src='http://www.datainvestment.rs/wp-content/uploads/2016/01/trans-logo-e1453907652943.png' alt='Data Investment'/></a><hr>"
-        . "Poštovani Admine, "
+        . "<strong>Poštovani Admine,</strong> "
         . "<br /><br />"
-        . "<p>Imate novu poruku za ponudu</p>"
-        . "<p>%s</p>", //comment
-        $comment_client
+        . "<p><strong>Imate novu poruku za ponudu</strong></p>"
+        . "<br /><br />"
+        . "<p><strong>Možete je pogledati na http://localhost/datainvestment/lista.php</strong></p>"
+       // . "<p>%s</p>", //comment
+       // $comment_client
+        . "<hr><p><strong>Kontakt:</strong></p>
+        <p>DATA INVESTMENT DOO </p>
+        <p>Bulevar Evrope 27, 21000 Novi Sad, Srbija</p>
+        <p>Bulevar Mihajla Pupina 165b, 11070 Beograd, Srbija</p>
+        <br />
+        <p>Tel/fax: 381 (0) 21 401 100</p>
+        <p>mob: 381 (0) 63 51 44 77</p>
+        <p>E-mail: info@datainvestment.rs</p><hr>"
         );
 
 $mail = new PHPMailer();
@@ -247,8 +263,8 @@ if(!$mail->Send()) {
     </div>
     
     <div class="form-group nepokretnosti-group">
-        <label for="slika">Slika:</label>
-        <input onChange="validate();" type="file" id="img" name="img[]" accept="image/x-png,image/gif,image/jpeg" multiple />
+        <label for="slika">Slika:</label> <!-- onChange="validate();" -->
+        <input onChange="validate();" type="file" id="img" name="img[]" accept="image/x-png,image/gif,image/jpeg" multiple max/>
     </div><br/>
     
     <div class="form-group pull-right nepokretnosti-buttons">

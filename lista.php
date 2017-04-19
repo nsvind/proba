@@ -71,7 +71,13 @@
                 });
             }
             
-            function getChecked(obj){
+            function getChecked(){
+                $("#formPagination").submit();
+                return true;
+            }
+            
+            function paginate(obj){
+                $("#page").val(obj);
                 $("#formPagination").submit();
                 return true;
             }
@@ -128,16 +134,25 @@
         $partialName = $_POST['partialName'];
     }
     $ukupnoIhIma = 0;
-    $res = $db1->countFromRealestateCheckbox($checked, $partialName);
+    $res = $db1->CountFromRealestateCheckbox($checked, $partialName);
      while ($new = $res->fetch(PDO::FETCH_ASSOC)) {
          $ukupnoIhIma = $new['broj'];
      }
      
-    $limit = 5;
+    $limit = 2;
     $offset = 0;
+    $first = 0;
+    $last = (INT)($ukupnoIhIma / $limit);
+    $page = 0;
+    $next = 0;
+    $previous = 0;
     
-    if (isset($_GET['page'])) {
-        $offset = $limit * $_GET['page'];
+    if (isset($_POST['page'])) {
+        $page = $_POST['page'];
+        $offset = $limit * $page;
+              
+        $previous = $page - 1;
+        $next = $page + 1;
     }
 //    $offset = ((int)($ukupnoIhIma / $limit)) * $limit;
      
@@ -151,10 +166,11 @@
          <table id="all_data" class="only">
           <tr class="only">
               <input <?php if ($checked) echo 'checked' ?> type="checkbox" id="check" name="check"
-                    onChange="getChecked(this)">Prikazati i obradjene<br /><br />
+                    onChange="getChecked(this)">Prikazati obradjene<br /><br />
             <label>Search: </label>
             <input type="text" value="<?php echo $partialName?>" id="partialName" name="partialName"
                    style="max-width:170px;min-height:33px;" onkeyUp="searchMe()" /><br /><br />
+            <input type="hidden" id="page" name="page" value="0">
              
 			 
             <th class="only">RB.</th>
@@ -180,18 +196,60 @@
            <tr>
                <td colspan="5" style="text-align: center;">
                    <!-- >>> PAGINATOR <<< -->
-                   <a> << </a>
-                   <a> < </a>
+                   
+                   <a class='first' onclick="paginate(0);" href="#"> << </a>
+                   <a class='first' onclick="paginate(<?php echo $previous ?>);" href="#"> < </a>
                    <?php
-                   
-                       for( $i = 0; $i <= ((int)($ukupnoIhIma / $limit)) + 1; $i++){
-                           echo '<a> '. ($i + 1) .' </a>';
-//                           echo 'Ukupno ih ima: ' . $ukupnoIhIma . ' a offset je: ' .$offset. ' a to je strnica br: ' . ($offset+1) . ' <br/>';
+                    
+                       for( $i = 0; $i < $last; $i++){ // SKINUO $last + 1
+                        //   if($i == $first){
+                            echo '<a onclick="paginate('.$i.');" href="#"> ' . ($i + 1) . ' </a>';
+                        //   }    //echo 'Ukupno ih ima: ' . $ukupnoIhIma . ' a offset je: ' .$offset. ' a to je strnica br: ' . ($offset+1) . ' <br/>';
                        }
-                   
+           
                    ?>
-                   <a> > </a>
-                   <a> >> </a>
+                   <a class='last' onclick="paginate(<?php echo $next ?>);" href="#"> > </a>
+                   <a class='last' onclick="paginate(<?php echo $last - 1 ?>);" href="#"> >> </a>
+                   <?php
+                        
+                        if($page == $first){
+                            ?>
+                                <style>
+                                    .first {
+                                        display: none;
+                                    }
+                                </style>
+                            <?php
+                        }else {
+                            ?>
+                                <style>
+                                    .first {
+                                        display: inline;
+                                    }
+                                </style>
+                   <?php
+                        }               
+                   ?>
+                    <?php
+                   
+                        if($page == ($last - 1)){
+                            ?>
+                                <style>
+                                    .last {
+                                        display: none;
+                                    }
+                                </style>
+                    <?php
+                        }else {
+                    ?>
+                                <style>
+                                    .last {
+                                        display: inline;
+                                    }
+                                </style>
+                   <?php
+                        }               
+                   ?>
                </td>
            </tr>
            
