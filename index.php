@@ -275,7 +275,7 @@ if(!$mail->Send()) {
         
    </div>
 <hr>
-            </div></form>
+            </div></form><!-- -->
     
           </div>
 	</div>    
