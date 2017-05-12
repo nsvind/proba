@@ -33,24 +33,25 @@ class DB {
         return $this->conn->lastInsertId();
     }*/
     
-    function InsertIntoRealestate($email_client, $quadrature, $comment_client, 
+    function InsertIntoRealestate($email_client, $address_client, $quadrature, $comment_client, 
                                  $ip, $typeID, $municipalityID, $catastralID, $optionID, $classID) {
 
         try {
             $statement = $this->conn->prepare("INSERT INTO realestate 
-                (`email_client`, `quadrature`, `comment_client`, `ip`, 
+                (`email_client`, `address_client`, `quadrature`, `comment_client`, `ip`, 
                 `id_type`, `id_municipality`, `id_catastral`, `id_option`, 
                 `id_class`)
-				VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+				VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $statement->bindParam(1, $email_client);
-            $statement->bindParam(2, $quadrature);
-            $statement->bindParam(3, $comment_client);
-            $statement->bindParam(4, $ip);
-            $statement->bindParam(5, $typeID, PDO::PARAM_INT);
-            $statement->bindParam(6, $municipalityID, PDO::PARAM_INT);
-            $statement->bindParam(7, $catastralID, PDO::PARAM_INT);
-            $statement->bindParam(8, $optionID, PDO::PARAM_INT);
-            $statement->bindParam(9, $classID, PDO::PARAM_INT);
+            $statement->bindParam(2, $address_client);
+            $statement->bindParam(3, $quadrature);
+            $statement->bindParam(4, $comment_client);
+            $statement->bindParam(5, $ip);
+            $statement->bindParam(6, $typeID, PDO::PARAM_INT);
+            $statement->bindParam(7, $municipalityID, PDO::PARAM_INT);
+            $statement->bindParam(8, $catastralID, PDO::PARAM_INT);
+            $statement->bindParam(9, $optionID, PDO::PARAM_INT);
+            $statement->bindParam(10, $classID, PDO::PARAM_INT);
             $statement->execute();
         } catch (PDOException $e) {
             echo $e->getMessage();
@@ -225,7 +226,7 @@ class DB {
         $var = '%' . $partialName . '%';
         
         try {
-            $sql = "SELECT r.id_realestate, r.email_client, m.name AS m_name, c.community 
+            $sql = "SELECT r.id_realestate, r.email_client, r.address_client, m.name AS m_name, c.community 
                         FROM realestate AS r
                         left join municipality AS m on m.id_municipality = r.id_municipality
                         left join catastral_municipality AS c on c.id_catastral = r.id_catastral      
@@ -306,7 +307,8 @@ class DB {
     
     function SelectFromDetaljnije($id) {
         try {
-            $statement = $this->conn->prepare("SELECT r.id_realestate, r.email_client, r.quadrature, r.comment_client,
+            $statement = $this->conn->prepare("SELECT r.id_realestate, r.email_client, r.address_client,
+                            r.quadrature, r.comment_client,
                             m.name
                             AS m_name, c.community, tof.name AS tof_name, o.option AS o_name, cl.class AS cl_name
                             FROM realestate AS r

@@ -9,6 +9,7 @@ if (isset($_POST['send'])) {
     $email_client = $_POST['email_client'];
     $quadrature = $_POST['quadrature'];
     $comment_client = $_POST['comment_client'];
+    $address_client = $_POST['address_client'];
     $ip = $_SERVER['REMOTE_ADDR'];
     $typeID = $_POST['type_realestate'];
     $municipalityID = $_POST['municipality'];
@@ -18,7 +19,7 @@ if (isset($_POST['send'])) {
     $classID = $_POST['classId'];
     
     if ($errMsg == '') {
-        $db1->InsertIntoRealestate($email_client, $quadrature, $comment_client,
+        $db1->InsertIntoRealestate($email_client, $address_client, $quadrature, $comment_client,
                 $ip, $typeID, $municipalityID, $catastralID, $optionID, $classID);
         
         $realestateID = $db1->getLastRealestateID();
@@ -213,6 +214,12 @@ if(!$mail->Send()) {
                </optgroup>
         </select>
     </div>
+     
+     <!-- Adresa. -->     
+     <div class="form-group nepokretnosti-group">
+       <label>Adresa:</label>
+       <input style="min-height:33px" type="text" name="address_client" id="address_client" />
+     </div>
        
      <!-- Katastarska Opština -->
     <div class="form-group nepokretnosti-group">
@@ -258,12 +265,12 @@ if(!$mail->Send()) {
    <br/>
 		
     <div class="form-group nepokretnosti-group">
-        <label for="komentarId">Komentar:</label>
+        <label for="komentarId">Dodatni opis - Komentar:</label>
         <textarea onChange="validate();"  class="comm" name="comment_client" id="comment"></textarea>
     </div>
     
     <div class="form-group nepokretnosti-group">
-        <label for="slika">Slika:</label> <!-- onChange="validate();" -->
+        <label for="slika">Slika nekretnine:</label>
         <input onChange="validate();" type="file" id="img" name="img[]" accept="image/x-png,image/gif,image/jpeg" multiple max/>
     </div><br/>
     
@@ -275,7 +282,7 @@ if(!$mail->Send()) {
         
    </div>
 <hr>
-            </div></form><!-- -->
+            </div></form>
     
           </div>
 	</div>    

@@ -96,6 +96,10 @@ function validate () {
            ok = ok && false;
         }
         
+        if (jQuery('#address_client').val() == '') {
+           ok = ok && false;
+        }
+        
         if (jQuery('#quadrature').val() == '') {
            ok = ok && false;
         }
@@ -105,7 +109,7 @@ function validate () {
         }
                         
         if (jQuery('#katopstinaId').val() == '') {
-            ok = ok && false;
+            ok = ok && true;
         }
         
         if(jQuery('#vrstaID').val() == 1){
@@ -140,21 +144,21 @@ function validate () {
 //            ok = ok && false;
 //        }
         
-        if (jQuery('#img')[0].files.length < 4){
+        if (jQuery('#img')[0].files.length < 6){
             var sum = 0;
             var files = jQuery('#img')[0].files;
            for(var i = 0; i < files.length; i++) {
                sum += files[i].size;
            }
            
-           if (1 * 1024 * 1024 < sum) {
+           if (5 * 1024 * 1024 < sum) {
                alert('Maksimalna velicina svih slika je 5Mb, izaberite ponovo...');
                jQuery('#img').val('');
                ok = ok && true;
            }
            
         } else {
-            alert('Maksimalan broj slika je 3, izaberite ponovo...');
+            alert('Maksimalan broj slika je 5, izaberite ponovo...');
             jQuery('#img').val('');
             ok = ok && true;
         }

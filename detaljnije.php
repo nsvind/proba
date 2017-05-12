@@ -107,6 +107,7 @@ if (isset($_GET['m']) && $_GET['m'] === 'f') {
 			echo "<p><strong>E-mail: </strong>" . $new['email_client'] . "</p>";
 			echo "<p><strong>Opština: </strong>" . $new['m_name'] . "</p>";
                         echo "<p><strong>Grad: </strong>" . $new['community'] . "</p>";
+                        echo "<p><strong>Adresa: </strong>" . $new['address_client'] . "</p>";
 			echo "<p><strong>Nepokretnost: </strong>" . $new['tof_name'] . " - " . $new['o_name'] . " "
                                 . $new['cl_name'] . "</p>";
                         echo "<p><strong>Kvadratura: </strong>" . $new['quadrature'] . " m<sup>2</sup></strong></p>";
