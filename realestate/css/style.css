@@ -1,0 +1,231 @@
+			body {
+				font-family: 'Arial'; 
+                font-style: normal;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 18px;
+                color: #525252;
+            } 
+			
+			h1,h2,h3,h4,h5,h6{
+				font-family: 'Arial';                                                                         
+			}
+			
+			p {
+				text-align: justify;
+				font-family: 'Arial';
+			}
+
+
+			label {
+				font-family: 'Arial';
+				display: block;
+				margin-bottom: 5px;
+				font-size: 12px;
+				font-weight: 600;
+			}
+			
+			textarea {
+			   width: 300px;
+			   height: 200px;
+			   resize: none;
+			   overflow: hidden;
+			   
+			}
+			/*
+			input {
+				width: 800px;
+			   height: 800px;
+			}
+			
+			
+			 /* Accodion + Toogle */
+                .panel-default .panel-heading .acc-title a.collapsed,
+                .panel-default .panel-heading .acc-title a.collapsed i,
+                a{ color: #006f94; } 
+            
+                .sidebar .menu li.current-menu-item > a, a:hover { color: #ff0000; } 
+                    
+        /* Main Menu */
+        .main-nav-outer-wrapper {
+            background:#c62020;
+        	/* Old browsers */
+        	background:#c62020 -moz-linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
+        	/* FF3.6+*/
+        	background:#c62020 -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,.2)),color-stop(100%,rgba(0,0,0,.2)));
+        	/* Chrome,Safari4+*/
+        	background:#c62020 -webkit-linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
+        	/* Chrome10+,Safari5.1+*/
+        	background:#c62020 -o-linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
+        	/* Opera11.10+*/
+        	background:#c62020 -ms-linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
+        	/* IE10+*/
+        	background:#c62020 linear-gradient(top,rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
+        }
+        
+        /* Box Icon in Megamenu */
+        #megaMenu #menuMobile li.menu-item-depth-0 .nav-dd .icon-menu a:hover, 
+        #megaMenu #megaST li.menu-item-depth-0 .nav-dd .icon-menu a:hover,
+        /* Item Title Tab in Megamenu */
+        #megaMenu #menuMobile .nav-dd ul.nav-tabs li.active a,
+        #megaMenu #megaST .nav-dd ul.nav-tabs li.active a,
+        /* Pagination */
+        .pagination > .active > a, 
+        .pagination > .active > span, 
+        .pagination > .active > a:hover, 
+        .pagination > .active > span:hover, 
+        .pagination > .active > a:focus, 
+        .pagination > .active > span:focus,
+        /* Box Service */
+        .box-style-2 a,
+        /* Widget Tag Clound */
+        .widget_tag_cloud a:hover,
+        /* Button Color */
+        .btn-color:hover,
+        #megaMenu #megaST li.menu-item-depth-0 .nav-dd a.btn-color:hover,
+        /* Button Default */
+        .btn-default,
+        a.btn-default,
+        #megaMenu #megaST li.menu-item-depth-0 .nav-dd a.btn-default,
+        /* Button Control */
+        #respond #submit,
+        #commentform #submit,
+        
+        /* Accodion + Toogle */
+        .panel-default .panel-heading .acc-title a,
+        .panel-default .panel-heading .acc-title a:hover,
+        
+        /**/
+        .st-testimonial-slider.carousel .carousel-indicators li.active,
+        .carousel-indicators .active,
+        ul.submenu-col li.active a
+        {
+            background-color: #c62020;
+        }
+        
+        /* Price Filter Handle */
+        .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, 
+        .woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle
+        {
+            background: #c62020 !important;
+        }
+        
+        /* Start Rating */
+        .woocommerce .products .star-rating, 
+        .woocommerce-page .products .star-rating,
+        .color-icon,  .text-color,
+        
+        /* */
+        .carousel-control .icon-prev, .carousel-control .icon-next
+        { 
+            color: #c62020; 
+        }
+        
+        /* Pagination */
+        .pagination>.active>a, 
+        .pagination>.active>span, 
+        .pagination>.active>a:hover, 
+        .pagination>.active>span:hover, 
+        .pagination>.active>a:focus, 
+        .pagination>.active>span:focus
+        {
+            border-color: #c62020;
+        }
+        
+        .bg-color:hover, 
+        .bg-parent-hover:hover .bg-color, 
+        .opened .bg-color , 
+        .st-carousel-w .prev, 
+        .st-carousel-w .next, 
+        .caro-pagination a
+        {
+    
+        }
+		
+    
+        h1{ font-size: 28px;} 
+		h2{ font-size: 28px;} 
+		h3{ font-size: 24px;} 
+		h4{ font-size: 18px;} 
+		h5{ font-size: 14px;} 
+		h6{ font-size: 12px;} 
+			
+		body { 
+			background: #ffffff url(http://www.datainvestment.rs/wp-content/uploads/2014/06/bodybg.jpg)  top left  repeat scroll;  ; 
+		} 
+		
+		#megaMenu #menuMobile .no-megamenu ul, #megaMenu #megaST .no-megamenu ul, .header-wrapper, .main-nav-outer-wrapper .slideMenu .menu ul, #primary-nav-mobile-id > li > ul.sub-menu, #megaMenu #megaST li.menu-item-depth-0 .nav-dd, body .st-cart-icon .cart-content .widget_shopping_cart_content, #megaMenu #menuMobile .nav-dd { background: #f7f7f7;  ; }	
+		
+		h1.page-title {color:#888;}
+		#phone {color:#000; background: url("/wp-content/themes/Edu/assets/images/telefon.png") no-repeat scroll right center rgba(0, 0, 0, 0);}
+		#phone strong {color:#990000;}
+
+		#megaMenu #megaST .no-megamenu .menu-row li:hover > a, #megaMenu #megaST .no-megamenu .menu-row li.active > a, #megaMenu #megaST .no-megamenu .menu-row li a:hover {color: #000;}
+
+		.feat h3 { text-shadow: 0px 0px 0 #FFFFFF; }
+
+		h3.service-title {color:#ffffff;}
+
+		.box-style-2 a {
+			background: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%) repeat scroll 0 0 #C62020;
+			box-shadow: 0 10px 12px -6px rgba(0, 0, 0, 0.4), 0 0 0 0px rgba(255, 255, 255, 0.1) inset;
+		}
+
+		footer {
+			padding-top: 10px;
+		}
+
+
+		.main-wrapper .list-post .post, .main-wrapper .list-post .course, .main-wrapper .list-post .event, .main-wrapper .list-post .page {
+			padding-bottom: 10px;
+		}
+
+		.search .product, .post {
+			margin-bottom: 5px;
+		}
+
+		.st-il-content {
+			text-align: justify;
+		}
+
+		select {
+			font-family: 'Arial';
+			height: 33px;
+			font-size: 13px;
+			padding :0;
+			background-color: #FFF;
+			border: 1px solid #E2E2E2;
+			box-shadow: 0px 0px 8px #E3E3E3 inset;
+			margin-bottom: 0;
+			transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+		}
+	
+    .nepokretnosti-input {
+        width: 136px;
+    }
+
+    .nepokretnosti-buttons {
+        margin-top:23px;
+    }
+
+    .nepokretnosti-group {
+		 
+    }
+
+    .btn-default[disabled] {
+        background-color: #000 !important;
+    }
+	
+	img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 .07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		} 

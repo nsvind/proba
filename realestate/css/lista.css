@@ -1,0 +1,20 @@
+.hide {
+      display: none;
+}
+.only table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+}
+.only td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+}
+.only tr:nth-child(even) {
+     background-color: #dddddd;
+}
+/*p {
+	line-height: 1.5em;
+	margin: 0px 0px 10px 0px;
+}*/
